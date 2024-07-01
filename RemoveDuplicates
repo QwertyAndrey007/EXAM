@@ -40,6 +40,11 @@ var
 begin
    str := Edit1.text;
    result:= '';
+for i:=1 to length(str) do
+   begin
+     if (pos(str[i], str) = i) then
+        result += str[i];
+   end;              
    edit2.Text:= result;
 end;
 
